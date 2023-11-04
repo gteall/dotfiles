@@ -1,0 +1,410 @@
+{
+    //workbench
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.colorTheme": "Tokyo Night Storm",
+    //editor
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.parameterHints.enabled": false,
+    // "editor.fontFamily": "JetBrainsMono Nerd Font,思源黑体 CN,Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'JetBrains Mono NL', '终端更纱黑体-简 Nerd'",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.3,
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 5,
+    "editor.inlineSuggest.enabled": true,
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.suggest.insertMode": "replace",
+    "[cpp]": {
+        "editor.links": false
+    },
+    "editor.tokenColorCustomizations": {
+        "[Tokyo Night Storm]": { // or "[Tokyo Night Storm]"
+            "textMateRules": [
+                { // disable italics
+                    "scope": [
+                        "comment",
+                        "meta.var.expr storage.type",
+                        "keyword.control.flow",
+                        "keyword.control.return",
+                        "meta.directive.vue punctuation.separator.key-value.html",
+                        "meta.directive.vue entity.other.attribute-name.html",
+                        "tag.decorator.js entity.name.tag.js",
+                        "tag.decorator.js punctuation.definition.tag.js",
+                        "storage.modifier"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "keyword.control",
+                        "keyword.other",
+                    ],
+                    "settings": {
+                        "foreground": "#86e1fc"
+                    }
+                },
+                {
+                    "scope": [
+                        "storage.type",
+                        // "storage.modifier",
+                    ],
+                    "settings": {
+                        "foreground": "#fca7ea"
+                    }
+                },
+            ]
+        }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "[Tokyo Night Storm]": {
+            "enabled": true,
+            "rules": {
+                "class": "#65bcff",
+                "enum": "#65bcff",
+                "enumMember": "#ff966c",
+                "function": "#82aaff",
+                "macro": "#86e1fc",
+                "method": "#82aaff",
+                "parameter": "#ffc777",
+                "property": "#4fd6be", //类变量
+                "variable": "#ff966c",
+                "type": "#65bcff", //"#26A69A",
+                "namespace": "#86e1fc",
+                "*.static": "#ff966c",
+                "type.defaultLibrary": "#65bcff",
+                // "keyword": "#ff0000",
+                // "readonly":"#ff0000",
+                // "struct": "#ff0000",
+                // "string": "#ff0000",
+                // "typeParameter": "#ff0000",
+                // "regexp": "#ff0000",
+                // "number": "#ff0000",
+                // "operator": "#ff0000",
+                // "interface": "#ff0000",
+                // "label": "#ff0000",
+                // "event": "#ff0000",
+                // "comment": "#ff0000",
+                // "decorator": "#ff0000",
+            }
+        }
+    },
+    //other
+    "files.autoSave": "afterDelay",
+    "clangd.arguments": [
+        "--header-insertion=never"
+    ],
+    "search.exclude": {
+        "**/.cache": true,
+        "**/build": true,
+        "**/compile_commands.json": true
+    },
+    "window.zoomLevel": 0.3,
+    "zenMode.hideLineNumbers": false,
+    //vim
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": false,
+    "vim.easymotion": true,
+    "vim.leader": "<space>",
+    "vim.useCtrlKeys": true,
+    "vim.flash.enable": true,
+    "vim.hlsearch": true,
+    "vim.foldfix": true,
+    "vim.searchHighlightColor": "rgba(62, 104, 215, 1.0)",
+    "vim.searchHighlightTextColor": "rgba(200, 211, 245, 1.0)",
+    "vim.searchMatchColor": "rgba(255, 150, 108, 1.0)",
+    "vim.searchMatchTextColor": "rgba(27, 29, 43, 1.0)",
+    "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.textColor": "white",
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": [
+        "#1c202e",
+        "#ffffff"
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "l",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l",
+                "f"
+            ],
+            "commands": [
+                "editor.action.format"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.compareEditor.nextChange"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "z",
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f",
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<esc>",
+            ],
+            "commands": [
+                ":nohl"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "w",
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "t",
+            ],
+            "commands": [
+                "workbench.action.selectTheme"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "c",
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "h",
+            ],
+            "commands": [
+                "clangd.switchheadersource"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "b",
+            ],
+            "commands": [
+                "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "]",
+            ],
+            "commands": [
+                "editor.action.wordHighlight.next"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "[",
+            ],
+            "commands": [
+                "editor.action.wordHighlight.prev"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "leader",
+                ":"
+            ],
+            "after": [
+                ":"
+            ],
+            "silent": true
+        },
+        // {
+        //     "before": [
+        //         "<c-n>"
+        //     ],
+        //     "after": [
+        //         ":",
+        //         "n",
+        //         "o",
+        //         "h",
+        //         "l",
+        //     ]
+        // },
+        {
+            "before": [
+                "s",
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "2",
+                "s",
+            ]
+        },
+        //editor.action.smartSelect.expand
+        {
+            "before": [
+                "S"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "leader",
+                "b",
+                "d",
+                "w",
+                // "j",
+                // "k",
+            ]
+        },
+    ],
+    "vim.insertModeKeyBindings": [],
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "vim.operatorPendingModeKeyBindings": [],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-j>": false,
+        // "<C-n>": false,
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#5f00af",
+        "statusBar.noFolderBackground": "#5f00af",
+        "statusBar.debuggingBackground": "#5f00af",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+}
