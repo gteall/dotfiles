@@ -12,4 +12,14 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"for-auto": {
+		"prefix": "fauto",
+		"body": [
+		"for(auto $1 : $2)",
+		"{",
+			"    $3",
+		"}"
+		],
+		"description": "for-auto"
+	}
 }

@@ -23,6 +23,7 @@
     "editor.smoothScrolling": true,
     "editor.stickyScroll.enabled": true,
     "editor.suggest.insertMode": "replace",
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "[cpp]": {
         "editor.links": false
     },
@@ -186,7 +187,26 @@
                 "g"
             ],
             "commands": [
-                "workbench.action.compareEditor.nextChange"
+                "workbench.action.editor.nextChange"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.editor.previousChange"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "h"
+            ],
+            "commands": [
+                "git.revertSelectedRanges"
             ]
         },
         {
@@ -282,6 +302,15 @@
             ],
             "commands": [
                 "clangd.switchheadersource"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r",
+            ],
+            "commands": [
+                "editor.action.goToReferences"
             ]
         },
         {
@@ -390,6 +419,16 @@
                 "editor.action.outdentLines"
             ]
         },
+        {
+            "before": [
+                "leader",
+                "l",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatSelection"
+            ]
+        },
     ],
     "vim.handleKeys": {
         "<C-a>": false,
@@ -398,13 +437,13 @@
         // "<C-n>": false,
     },
     "workbench.colorCustomizations": {
-        "statusBar.background": "#5f00af",
-        "statusBar.noFolderBackground": "#5f00af",
-        "statusBar.debuggingBackground": "#5f00af",
+        "statusBar.background": "#1c202e",
+        "statusBar.noFolderBackground": "#1c202e",
+        "statusBar.debuggingBackground": "#1c202e",
         "statusBar.foreground": "#ffffff",
         "statusBar.debuggingForeground": "#ffffff"
     },
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
-    }
+    },
 }
