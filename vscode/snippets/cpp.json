@@ -17,9 +17,46 @@
 		"body": [
 		"for(auto $1 : $2)",
 		"{",
-			"    $3",
+			"\t$3",
 		"}"
 		],
 		"description": "for-auto"
-	}
+	},
+    "do": {
+        "prefix": "do",
+        "body": [
+			"do",
+			"{", 
+			"\t$0", 
+			"} while($1);"
+		],
+        "description": "Code snippet for do...while loop"
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++)",
+			"{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Code snippet for 'for' loop"
+    },
+    "switch": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:switch_on})",
+			"{",
+			"\tcase $0:",
+			"\t{",
+			"\t\tbreak;",
+			"\t}",
+            "\tdefault:",
+			"\t{",
+            "\t\tbreak;",
+			"\t}",
+            "}"
+        ],
+        "description": "Code snippet for switch statement"
+    },
 }

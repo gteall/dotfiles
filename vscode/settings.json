@@ -24,6 +24,11 @@
     "editor.stickyScroll.enabled": true,
     "editor.suggest.insertMode": "replace",
     "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    },
     "[cpp]": {
         "editor.links": false
     },
@@ -157,6 +162,26 @@
         },
         {
             "before": [
+                "leader",
+                "l",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l",
+                "S"
+            ],
+            "commands": [
+                "workbench.action.showAllSymbols"
+            ]
+        },
+        {
+            "before": [
                 "K"
             ],
             "commands": [
@@ -270,6 +295,16 @@
         {
             "before": [
                 "<leader>",
+                "f",
+                "o",
+            ],
+            "commands": [
+                "workbench.action.showAllEditorsByMostRecentlyUsed"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "c",
             ],
             "commands": [
@@ -292,7 +327,8 @@
                 "t",
             ],
             "commands": [
-                "workbench.action.terminal.toggleTerminal"
+                // "workbench.action.terminal.toggleTerminal"
+                "workbench.action.togglePanel"
             ]
         },
         {
@@ -359,18 +395,6 @@
             ],
             "silent": true
         },
-        // {
-        //     "before": [
-        //         "<c-n>"
-        //     ],
-        //     "after": [
-        //         ":",
-        //         "n",
-        //         "o",
-        //         "h",
-        //         "l",
-        //     ]
-        // },
         {
             "before": [
                 "s",
@@ -433,8 +457,9 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false,
-        "<C-j>": false,
-        // "<C-n>": false,
+        "<C-,>": false,
+        "<C-s>": false,
+        "<C-k>": false,
     },
     "workbench.colorCustomizations": {
         "statusBar.background": "#1c202e",
@@ -446,4 +471,5 @@
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
+    "gitlens.currentLine.enabled": false,
 }
