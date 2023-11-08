@@ -351,11 +351,36 @@
         },
         {
             "before": [
+                "L",
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "H",
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
                 "]",
                 "b",
             ],
             "commands": [
-                "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "b",
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
             ]
         },
         {
@@ -376,8 +401,18 @@
                 "editor.action.wordHighlight.prev"
             ]
         },
+        // {
+        //     "before": [
+        //         ":"
+        //     ],
+        //     "commands": [
+        //         "workbench.action.showCommands",
+        //     ],
+        //     "silent": true
+        // },
         {
             "before": [
+                "leader",
                 ":"
             ],
             "commands": [
@@ -388,10 +423,14 @@
         {
             "before": [
                 "leader",
-                ":"
+                "f",
+                "s",
             ],
-            "after": [
-                ":"
+            "commands": [
+                "workbench.action.openSettingsJson",
+                "workbench.action.openGlobalSettings",
+                "workbench.action.openGlobalKeybindingsFile",
+                "workbench.action.openGlobalKeybindings",
             ],
             "silent": true
         },
@@ -466,10 +505,16 @@
         "statusBar.noFolderBackground": "#1c202e",
         "statusBar.debuggingBackground": "#1c202e",
         "statusBar.foreground": "#ffffff",
-        "statusBar.debuggingForeground": "#ffffff"
+        "statusBar.debuggingForeground": "#ffffff",
+        "editor.findMatchBorder": "#ff966c",
+        "editor.findMatchHighlightBorder": "#ffffff"
     },
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
     "gitlens.currentLine.enabled": false,
+    "editor.rulers": [
+        120
+    ],
+    "workbench.activityBar.location": "top",
 }

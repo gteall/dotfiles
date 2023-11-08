@@ -183,5 +183,24 @@
         "key": "ctrl+j",
         "command": "-editor.action.joinLines",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "enter",
+        "command": "list.toggleExpand",
+        "when": "listFocus && !inputFocus && filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.previousMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     }
 ]
